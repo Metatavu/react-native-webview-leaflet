@@ -458,6 +458,9 @@ class mapComponent extends Component {
                   coords: [event.latlng.lat, event.latlng.lng]
                 });
               }}
+              onBaselayerchange={(event) => {
+                this.onMapEvent('onBaselayerchange', event);
+              }}
               onZoomLevelsChange={() => {
                 this.onMapEvent('onZoomLevelsChange', null);
               }}
